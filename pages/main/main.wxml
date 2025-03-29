@@ -22,6 +22,7 @@
     <view class="chat-list">
       <block wx:for="{{messages}}" wx:key="id">
         <view class="message-item {{item.type === 'user' ? 'message-user' : 'message-ai'}}" id="msg-{{item.id}}">
+          <image class="avatar" src="{{item.type === 'user' ? '../../statics/用户头像.png' : '../../statics/头像.png'}}" mode="aspectFill"></image>
           <view class="message-content">
             <text>{{item.content}}</text>
           </view>

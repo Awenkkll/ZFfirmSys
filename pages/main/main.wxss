@@ -149,7 +149,8 @@
   max-width: 70%;
   margin-bottom: 30rpx;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .message-ai {
@@ -160,6 +161,27 @@
 .message-user {
   align-self: flex-end;
   margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin: 0 10rpx;
+  flex-shrink: 0; /* 防止头像被压缩 */
+  overflow: hidden; /* 确保圆形裁剪生效 */
+  background-color: #f1f1f1; /* 添加背景色，防止图片加载前显示异常 */
+}
+
+.message-ai .avatar {
+  margin-left: 5rpx;
+  margin-right: 15rpx;
+}
+
+.message-user .avatar {
+  margin-left: 15rpx;
+  margin-right: 5rpx;
 }
 
 .message-content {
@@ -168,6 +190,7 @@
   font-size: 30rpx;
   word-break: break-all;
   line-height: 42rpx;
+  max-width: calc(100% - 100rpx);
 }
 
 .message-ai .message-content {
