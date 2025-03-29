@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 返回主菜单按钮 -->
+  <view class="back-button" bindtap="backToMain">返回主菜单</view>
+  
+  <!-- 订单列表区域 -->
+  <view class="order-list-container">
+    <!-- 表头 -->
+    <view class="table-header">
+      <view class="header-cell time-cell">订单时间</view>
+      <view class="header-cell company-cell">需求主体</view>
+      <view class="header-cell status-cell">订单状态</view>
+      <view class="header-cell action-cell"></view>
+    </view>
+    
+    <!-- 订单列表 -->
+    <block wx:for="{{orderList}}" wx:key="id">
+      <view class="table-row {{index % 2 === 0 ? 'row-even' : 'row-odd'}}">
+        <view class="table-cell time-cell">{{item.orderTime}}</view>
+        <view class="table-cell company-cell">{{item.company}}</view>
+        <view class="table-cell status-cell">{{item.status}}</view>
+        <view class="table-cell action-cell">
+          <view class="view-button" bindtap="viewOrderDetail" data-order-id="{{item.id}}">查看</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 创建新订单按钮 -->
+  <view class="create-button" bindtap="createNewOrder">创建新的订单</view>
+</view> 

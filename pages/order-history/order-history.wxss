@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #e8f4e8;
+  position: relative;
+}
+
+/* 返回主菜单按钮 */
+.back-button {
+  width: 200rpx;
+  height: 70rpx;
+  background-color: #2b7d81;
+  color: white;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+  border-radius: 6rpx;
+  align-self: flex-start;
+  margin-left: 0;
+}
+
+/* 订单列表容器 */
+.order-list-container {
+  width: 100%;
+  flex: 1;
+  background-color: #e1f1fb;
+  border-radius: 6rpx;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+
+/* 表头样式 */
+.table-header {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  background-color: #2b7d81;
+  color: white;
+}
+
+.header-cell {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/* 表格行样式 */
+.table-row {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+}
+
+.row-even {
+  background-color: #d3d3d3;
+}
+
+.row-odd {
+  background-color: #b0c4de;
+}
+
+/* 表格单元格样式 */
+.table-cell {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  border-right: 1rpx solid #eeeeee;
+}
+
+/* 每列宽度设置 */
+.time-cell {
+  width: 30%;
+}
+
+.company-cell {
+  width: 30%;
+}
+
+.status-cell {
+  width: 30%;
+}
+
+.action-cell {
+  width: 10%;
+}
+
+/* 查看按钮 */
+.view-button {
+  width: 80rpx;
+  height: 50rpx;
+  background-color: #2b7d81;
+  color: white;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rpx;
+}
+
+/* 创建新订单按钮 */
+.create-button {
+  width: 220rpx;
+  height: 70rpx;
+  background-color: #2b7d81;
+  color: white;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+  border-radius: 6rpx;
+} 

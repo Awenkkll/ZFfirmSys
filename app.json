@@ -2,6 +2,8 @@
   "pages": [
     "pages/main/main",
     "pages/blank/blank",
+    "pages/order-history/order-history",
+    "pages/new-order/new-order",
     "pages/index/index",
     "pages/logs/logs"
   ],

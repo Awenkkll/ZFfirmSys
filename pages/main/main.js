@@ -101,9 +101,41 @@ Page({
   // 导航到空白页面
   navigateTo: function(e) {
     const page = e.currentTarget.dataset.page;
-    wx.navigateTo({
-      url: `../blank/blank?type=${page}`
-    });
+    
+    // 如果是下单功能，先检查是否有历史订单
+    if (page === 'order') {
+      this.checkHistoryOrders();
+    } else {
+      wx.navigateTo({
+        url: `../blank/blank?type=${page}`
+      });
+    }
+  },
+  
+  // 检查是否有历史订单
+  checkHistoryOrders: function() {
+    // 模拟接口调用，检查用户是否有历史订单
+    // 实际项目中应该调用服务器接口
+    const hasHistoryOrders = wx.getStorageSync('hasHistoryOrders');
+    
+    if (hasHistoryOrders === '') {
+      // 如果本地存储中没有相关数据，默认假设有历史订单（用于演示）
+      wx.setStorageSync('hasHistoryOrders', true);
+    }
+    
+    const hasOrders = wx.getStorageSync('hasHistoryOrders');
+    
+    if (hasOrders) {
+      // 如果有历史订单，跳转到历史订单页面
+      wx.navigateTo({
+        url: '../order-history/order-history'
+      });
+    } else {
+      // 如果没有历史订单，跳转到新订单页面
+      wx.navigateTo({
+        url: '../new-order/new-order'
+      });
+    }
   },
   
   // 显示更多选项
