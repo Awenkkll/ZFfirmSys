@@ -1,3 +1,28 @@
 <view class="container">
   <image class="bg-image" src="../../statics/设计订单管理系统.png" mode="aspectFill"></image>
+  
+  <!-- 左侧功能菜单 -->
+  <view class="menu-container">
+    <view class="menu-item" bindtap="navigateTo" data-page="order">
+      <view class="menu-text">下单</view>
+    </view>
+    <view class="menu-item" bindtap="navigateTo" data-page="history">
+      <view class="menu-text">查询</view>
+    </view>
+    <view class="menu-item" bindtap="navigateTo" data-page="settings">
+      <view class="menu-text">了解我们</view>
+    </view>
+    <view class="menu-item" bindtap="navigateTo" data-page="about">
+      <view class="menu-text">寻求合作</view>
+    </view>
+  </view>
+
+  <!-- 底部输入栏 -->
+  <view class="input-container">
+    <view class="input-box">
+      <textarea class="text-input" placeholder="请输入内容..." auto-height maxlength="500" bindinput="inputChange" value="{{inputValue}}" cursor-spacing="20" show-confirm-bar="{{false}}"></textarea>
+      <view class="send-button" bindtap="sendMessage">发送</view>
+      <view class="plus-button" bindtap="showMoreOptions">➕</view>
+    </view>
+  </view>
 </view> 

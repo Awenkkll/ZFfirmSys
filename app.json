@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/main/main",
+    "pages/blank/blank",
     "pages/index/index",
     "pages/logs/logs"
   ],
