@@ -1,6 +1,4 @@
 <view class="container">
-  <image class="bg-image" src="../../statics/设计订单管理系统.png" mode="aspectFill"></image>
-  
   <!-- 顶部功能菜单 -->
   <view class="menu-container">
     <view class="menu-item" bindtap="navigateTo" data-page="order">
